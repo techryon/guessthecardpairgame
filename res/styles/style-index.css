@@ -4,16 +4,25 @@ h1 {
 
 .container {
     height: 90vh;
-    margin: 2rem;
+    
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
     
 }
 
 .cell {
-    /*color: white; - https://www.developerdrive.com/2018/02/how-to-create-a-css-grid-step-by-step/*/
+    max-width: 100%;
+    object-fit: cover;
+    align-content: center;
+}
+/*
+.cell {
+    color: white; - https://www.developerdrive.com/2018/02/how-to-create-a-css-grid-step-by-step
+    max-width:100%
     font-size: 3rem;
     text-align: center;
     padding: 4rem;
-}
+    border-style: solid;
+}*/
