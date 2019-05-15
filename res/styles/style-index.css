@@ -4,9 +4,9 @@ h1 {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(9, 9.5vw);
-    /*grid-template-rows: repeat(3, 12.5vw);*/
-    grid-gap: 0.5px;
+    grid-template-columns: repeat(9, 100px);
+    /*grid-template-rows: repeat(3, 9.5vw12.5vw);
+    grid-gap: 0.5px;*/
     
 }
 
