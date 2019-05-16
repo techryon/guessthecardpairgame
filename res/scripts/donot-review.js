@@ -27,9 +27,15 @@ function createDiv() {
   div.setAttribute("class", "gallery__item");
   div.setAttribute("id", ("gallery_item"+i));
   parentDiv.appendChild(div);
+  createImg(i, div);
+  }
+}
+
+function createImg(i, div) {
   var img = document.createElement("img");
   div.appendChild(img);
   img.setAttribute("class", "gallery__img");
   img.setAttribute("id", ("gallery_img"+i));
-  }
+  //return img;
 }
+
