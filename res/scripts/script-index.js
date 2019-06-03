@@ -7,7 +7,7 @@ var two = 2;
 document.addEventListener("DOMContentLoaded", function(event) {
  // onload_image();
   createDiv();
-  addClickListenToCardscti();
+  addClickListenToCards();
 });
 
   //Function to create the div elements for the grid
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function addClickListenToCards(){  
   var cards = document.getElementsByClassName('containerDivClass');
-  for(let i=0; i<card.length; i++){
+  for(let i=0; i<cards.length; i++){
     cards[i].addEventListener('click', function() {
     cards[i].classList.toggle('is-flipped');
     });
