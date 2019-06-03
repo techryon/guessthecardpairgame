@@ -7,7 +7,7 @@ var two = 2;
 document.addEventListener("DOMContentLoaded", function(event) {
  // onload_image();
   createDiv();
-  listenToClick();
+  addClickListenToCards();
 });
 
   //Function to create the div elements for the grid
@@ -51,11 +51,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
 
-function listenToClick(){  
-  var card = document.getElementsByClassName('containerDivClass');
+function addClickListenToCards(){  
+  var cards = document.getElementsByClassName('containerDivClass');
   for(let i=0; i<card.length; i++){
-    card[i].addEventListener('click', function() {
-    card[i].classList.toggle('is-flipped');
+    cards[i].addEventListener('click', function() {
+    cards[i].classList.toggle('is-flipped');
     });
   }
 }
