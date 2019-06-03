@@ -7,7 +7,7 @@ var two = 2;
 document.addEventListener("DOMContentLoaded", function(event) {
  // onload_image();
   createDiv();
-  addClickListenToCards();
+  addClickListenToCardscti();
 });
 
   //Function to create the div elements for the grid
