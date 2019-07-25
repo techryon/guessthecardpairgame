@@ -1,3 +1,9 @@
+/*Setting the body font*/
+body {
+    font-family: sans-serif;
+}
+
+
 /*Setting the color for h1*/
 h1 {
     color: SeaGreen;
@@ -5,14 +11,44 @@ h1 {
 
 /*Setting the grid for the container class*/  
 .container {
-    display: grid;
-    grid-template-columns: repeat(9, 100px);
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+ }
+
+.container div {
     
+    flex: 1 1 calc(11.11%);
 }
-/*Setting how the image is displayed*/
-.cell__img {
+
+
+
+.containerDivClass {
+    
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    float: left; 
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+
+.containerDivClass.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.cellImgClass {
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-
+    line-height: 260px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    backface-visibility: hidden;
 }
+
+.imgFront{
+    transform: rotateY(180deg);
+}
+
