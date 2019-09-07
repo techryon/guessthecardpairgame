@@ -1,7 +1,7 @@
 //Initializing the required variables
 var totalCard = 36;
 var two = 2;
-
+// omg is it two months
 //AddEventListener to DOMContentLoaded, so the image waits to load
 //after the page is loaded
 document.addEventListener("DOMContentLoaded", function(event) {
