@@ -1,3 +1,4 @@
+
 //Creating a constant and capturing all the elements with the name .memory-card
 const cards = document.querySelectorAll('.memory-card');
 
