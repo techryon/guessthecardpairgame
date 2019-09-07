@@ -17,15 +17,20 @@ body {
     height: 640px;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
+    perspective: 1000px;    
     /*border: 2px solid lime;*/
 }
 
-/*Styling for the card container */
+/*Styling for the card container 
+  Along with the transform style when clicked*/
 .memory-card {
     width:25%;
     height: 25%;
     position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
     /*border: 2px solid aqua;*/
 }
 
@@ -35,6 +40,13 @@ body {
     transition: transform .2s;
 }
 
+/*This sets what happens when "flip" is added to the class*/
+.memory-card.flip {
+    transform: rotateY(180deg)
+}
+
+
+
 /*Styling for the image container*/
 .front-face,
 .back-face {
@@ -43,7 +55,12 @@ body {
     padding: 2px;
     position: absolute;
     border-radius: 5px;
+    backface-visibility: hidden; /*every html element has a backface, setting it hidden, so when clicked the same image is not mirrored */
     /*border: 2px solid deeppink;*/
+}
+
+.front-face {
+    transform: rotateY(180deg);
 }
 
 /*Allowing image to take the whole size of the image container*/
