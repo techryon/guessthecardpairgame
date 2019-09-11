@@ -21,8 +21,8 @@ header {
 }
 
 .scoring-panel {
-    width: 640px;
-    height: 55px;
+    width: 650px;
+    height: 45px;
     margin: auto;
     justify-content: center;
     /*border: 1px solid black;*/
@@ -31,6 +31,9 @@ header {
     justify-content: center;
 }
 
+.stars {
+    margin: 10px;
+}
 
 .moves, #restart {
     background-color: rgb(202, 118, 118);
@@ -39,16 +42,16 @@ header {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    padding: 10px 10px;
+    padding: 12px 12px;
     font-size: 16px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 4px 4px;
-    cursor: pointer;
+    cursor: auto;
 }
 
 /*Size, display, margin for the game board*/
 .memory-game {
-    width: 640px;
+    width: 650px;
     height: 580px;
     margin: auto;
     display: flex;
@@ -60,8 +63,8 @@ header {
 /*Styling for the card container 
   Along with the transform style when clicked*/
 .memory-card {
-    width:25%;
-    height: 25%;
+    width:11%;
+    height:25%;
     position: relative;
     transform: scale(1);
     transform-style: preserve-3d;
