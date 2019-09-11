@@ -4,11 +4,15 @@
 
 //Creating a constant and capturing all the elements with the name .memory-card
 const cards = document.querySelectorAll('.memory-card');
+const restart = document.getElementById('restart'); //restart
+const counting = document.querySelector('.counting'); //.counting
+
 
 
 let hasFlippedCard = false; //to capture 1st card click
 let lockBoard = false; //to lock the board when one set of cards are not matched
 let firstCard, secondCard; //to differentiate between 1st and 2nd card
+let countMove = 0; //to capture the counter of moves
 
 //Function to toggle the classlist with flip and removing it of item being clicked
 function flipCard() {
@@ -66,8 +70,17 @@ function unflipCards() {
     secondCard.classList.remove('flip');
     
     resetBoard(); 
+    countingMoves();
     }, 1500);
 }
+
+//function to count the moves
+function countingMoves(){
+  countMove++
+  counting.innerHTML = countMove; //adding the counter value in the innerHTML
+
+}
+
 
 //function to reset the board when the same card is clicked twice
 //Also following ES6 Destructuring assignment
@@ -78,19 +91,25 @@ function resetBoard() {
 
 //function to shuffle the cards
 //also execute it immediately - no calling and all
-(function shuffle() {
+function shuffle() {
   cards.forEach(card => {
     let randomPos = Math.floor(Math.random() * cards.length);
     card.style.order = randomPos;
   });
-})();
+};
 
-
+//function to reset or restart the game anytime
+function restartGame() {
+  location.reload(); //Tried different ways but my other codes were buggy
+                    // Simply reloading the page :(
+  
+}
 
 /*Looping through each item in the cards array
 by listening to the click event and calling flipCard function */
 cards.forEach(card=> card.addEventListener('click', flipCard));
-
+restart.addEventListener('click', restartGame);
+document.body.onload = shuffle();
 
 
 /* This whole block is changed to terinary operator

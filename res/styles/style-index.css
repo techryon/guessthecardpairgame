@@ -11,10 +11,45 @@ body {
     background: #494648;
 }
 
+header {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+    color:rgb(202, 95, 24);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.scoring-panel {
+    width: 640px;
+    height: 55px;
+    margin: auto;
+    justify-content: center;
+    /*border: 1px solid black;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.moves, #restart {
+    background-color: rgb(202, 118, 118);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 4px 4px;
+    cursor: pointer;
+}
+
 /*Size, display, margin for the game board*/
 .memory-game {
     width: 640px;
-    height: 640px;
+    height: 580px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
