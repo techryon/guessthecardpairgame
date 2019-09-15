@@ -27,6 +27,7 @@
         <p class="moves"><span class="counting">0</span> Move(s) </p>
         <button id="restart" type="button">Restart</button>
       </div>
+
   <!--Spade Cards-->
     <section class="memory-game">
       <div class="memory-card" data-framework="SpadeA">
@@ -37,7 +38,7 @@
         <img class="front-face" src="./res/images/SpadeA.png" alt="Ace Spade">
         <img class="back-face" src="./res/images/card-background.png" alt="Back">
       </div>
-
+<!--
       <div class="memory-card" data-framework="SpadeK">
         <img class="front-face" src="./res/images/SpadeK.png" alt="King Spade">
         <img class="back-face" src="./res/images/card-background.png" alt="Back">
@@ -68,7 +69,7 @@
           <img class="front-face" src="./res/images/Spade8.png" alt="8 Spade">
           <img class="back-face" src="./res/images/card-background.png" alt="Back">
       </div>
-  <!--Heart Cards-->
+  <!-Heart Cards
       <div class="memory-card" data-framework="HeartA">
         <img class="front-face" src="./res/images/HeartA.png" alt="Ace Heart">
         <img class="back-face" src="./res/images/card-background.png" alt="Back">
@@ -108,7 +109,7 @@
           <img class="front-face" src="./res/images/Heart8.png" alt="8 Heart">
           <img class="back-face" src="./res/images/card-background.png" alt="Back">
       </div>
-  <!--Clover Cards-->    
+  <!-Clover Cards    
       <div class="memory-card" data-framework="CloverA">
         <img class="front-face" src="./res/images/CloverA.png" alt="Ace Clover">
         <img class="back-face" src="./res/images/card-background.png" alt="Back">
@@ -148,7 +149,7 @@
           <img class="front-face" src="./res/images/Clover8.png" alt="8 Clover">
           <img class="back-face" src="./res/images/card-background.png" alt="Back">
       </div>
-  <!--Diamond Cards-->    
+  <!-Diamond Cards    
       <div class="memory-card" data-framework="DiamondA">
         <img class="front-face" src="./res/images/DiamondA.png" alt="Ace Diamond">
         <img class="back-face" src="./res/images/card-background.png" alt="Back">
@@ -187,8 +188,25 @@
       <div class="memory-card" data-framework="Diamond8">
           <img class="front-face" src="./res/images/Diamond8.png" alt="8 Diamond">
           <img class="back-face" src="./res/images/card-background.png" alt="Back">
+      </div> -->
+
+<!--Popup to show the winning stats-->
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2>Congratulations 🎉</h2>
+        <div class="content-1">
+          Congratulations you're a winner 🎉🎉
+        </div>
+        <div class="content-2">
+          <p>"You made " <span id="finalMove"> </span> moves</p>
+          <p>"Rating: " <span id=starRating></span></p>
+        </div>
+        <button id="play-again"></button>
       </div>
+    </div>
+
     </section>
+
     <!--The below is the script file to call the functions of the program-->
     <script type="text/javascript" src="./res/scripts/script-index.js"> </script>
     

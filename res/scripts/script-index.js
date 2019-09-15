@@ -6,13 +6,17 @@
 const cards = document.querySelectorAll('.memory-card');
 const restart = document.getElementById('restart'); //restart
 const counting = document.querySelector('.counting'); //.counting
-
+const playagain = document.getElementById('play-again');
 
 
 let hasFlippedCard = false; //to capture 1st card click
 let lockBoard = false; //to lock the board when one set of cards are not matched
 let firstCard, secondCard; //to differentiate between 1st and 2nd card
 let countMove = 0; //to capture the counter of moves
+let cardsMatched = 0; //to capture the matched cards
+let modal = document.getElementById("popup1");
+
+
 
 //Function to toggle the classlist with flip and removing it of item being clicked
 function flipCard() {
@@ -38,7 +42,9 @@ function flipCard() {
       //function to call to check for cards match
       checkForMatch();
 
-    
+      if(cardsMatched == 1){
+        congratulations();
+      }
 
 }
 
@@ -58,6 +64,9 @@ function checkForMatch() {
 function disableCards() {
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
+
+  cardsMatched++;
+  countingMoves();
 
   resetBoard();
 }
@@ -97,6 +106,17 @@ function shuffle() {
     card.style.order = randomPos;
   });
 };
+
+//function to announce the winning rating
+function congratulations() {
+  modal.classList.add("show");
+  var starRating = document.querySelector(".stars").innerHTML;
+  document.getElementById("finalMove").innerHTML = countMove;
+  document.getElementById("starRating").innerHTML = starRating;
+  playagain.addEventListener('click', restartGame);
+
+}
+
 
 //function to reset or restart the game anytime
 function restartGame() {
