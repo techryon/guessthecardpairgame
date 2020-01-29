@@ -15,8 +15,9 @@ let firstCard, secondCard; //to differentiate between 1st and 2nd card
 let countMove = 0; //to capture the counter of moves
 let cardsMatched = 0; //to capture the matched cards
 let modal = document.getElementById("popup1");
+let starsList = document.querySelectorAll(".stars li");
 
-
+console.log(starsList);
 
 //Function to toggle the classlist with flip and removing it of item being clicked
 function flipCard() {

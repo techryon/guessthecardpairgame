@@ -102,6 +102,29 @@ header {
     transform: rotateY(180deg);
 }
 
+/*
+ * Styles for congratulations modal
+ */
+
+
+ .overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+
 .popup {
 	margin: 70px auto;
 	padding: 20px;
@@ -110,7 +133,8 @@ header {
 	width: 85%;
 	position: relative;
 	transition: all 5s ease-in-out;
-	font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    visibility: hidden;
 }
 
 .popup h2 {
